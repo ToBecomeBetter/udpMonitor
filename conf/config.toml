@@ -1,0 +1,25 @@
+[serviceBasicInfo]
+cpu           = 0
+zookeeperAddr = "192.168.1.140:2181"
+esAddr        = "http://192.168.1.140:9200"
+dataSource    ="kafka"  #"/opt/testTools/udpMonitor/monitor.log" #需要分析的数据来源，目前支持从kafka和文件中读取。"kafak":从kafka数据流中读取数据；读日志文件："echat.log.2017-03-13",填写文件的绝对路径。
+
+[wechatInfo]
+
+[logConfig]
+logPath = "../log/udp.log"  #日志问题存储路径
+
+[topics]
+    [topics.monitor]   # topic 名称 注：只能使用小写+数字,不能使用大写；具体要求可以看es index说明
+        udpAlarm    = 30 # int
+        pushBuffNum = 1
+
+
+
+
+
+
+
+
+
+
